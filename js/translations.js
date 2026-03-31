@@ -100,6 +100,9 @@ sk: {
   'pricing.vip.f4':         'Reklamné spoty',
   'pricing.vip.f5':         'Neváhajte nás kontaktovať s akýmkoľvek vaším nápadom, ochotne s vami preberieme možnosti a realizáciu',
   'pricing.vip.f6':         'Cena bude kompletne personalizovaná podľa vášho projektu',
+  'pricing.extras.label':      'za príplatok',
+  'pricing.extras.decoration': 'Výzdoba vozidla — 50 €',
+  'pricing.extras.champagne':  'Chladené šampanské — 20 €',
   'pricing.vip.cta':        'Kontaktujte nás',
   'pricing.note':           '* Každá ponuka bude osobitne prekonzultovaná a ušitá vám na mieru',
 
@@ -242,6 +245,9 @@ sk: {
     'pricing.vip.f4':         'Spots publicitaires',
     'pricing.vip.f5':         'N\'hésitez pas à nous contacter avec n\'importe quelle idée — nous discuterons volontiers des possibilités et de sa réalisation',
     'pricing.vip.f6':         'Le tarif sera entièrement personnalisé selon votre projet',
+    'pricing.extras.label':      'en supplément',
+    'pricing.extras.decoration': 'Décoration du véhicule — 50 €',
+    'pricing.extras.champagne':  'Champagne frappé — 20 €',
     'pricing.vip.cta':        'Contactez-nous',
     'pricing.note':           '* Chaque offre sera individuellement discutée et adaptée à vos besoins spécifiques',
 
@@ -383,6 +389,9 @@ sk: {
     'pricing.vip.f4':         'Advertising spots',
     'pricing.vip.f5':         'Don\'t hesitate to reach out with any idea — we\'ll gladly discuss the possibilities and how to bring it to life',
     'pricing.vip.f6':         'Pricing will be fully customised to your project',
+    'pricing.extras.label':      'optional extras',
+    'pricing.extras.decoration': 'Vehicle decoration — 50 €',
+    'pricing.extras.champagne':  'Chilled champagne — 20 €',
     'pricing.vip.cta':        'Contact us',
     'pricing.note':           '* Every offer will be individually discussed and tailored to your specific needs',
 

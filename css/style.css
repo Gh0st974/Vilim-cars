@@ -418,15 +418,69 @@ body {
 
 /* ===== EVENT CARDS ===== */
 .event-card {
-  background: var(--dark-alt);
+  /* Fond de secours si pas d'image */
+  background-color: var(--dark-alt);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  /*
+   * ─── CHOIX DU MODE D'AFFICHAGE DE TON IMAGE ───────────────────────
+   *
+   * "contain" → L'image entière est visible, sans recadrage, sans zoom.
+   *             Des bandes noires peuvent apparaître sur les côtés
+   *             si le ratio de l'image ≠ ratio de la carte.
+   *             👉 RECOMMANDÉ si tu veux voir l'image en entier.
+   *
+   * "cover"   → L'image remplit toute la carte. Elle peut être rognée
+   *             sur les bords si le ratio ne correspond pas.
+   *
+   * Décommente l'une des deux lignes ci-dessous :
+   */
+  background-size: cover;   /* ← image entière, sans zoom */
+  /* background-size: cover; */
+
   border: 1px solid var(--gray-border);
   padding: 32px 24px;
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+
+  /* Hauteur minimale pour que la carte ait de la substance */
+  min-height: 280px;
+
+  /* Centre le contenu verticalement */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
+/* ── Overlay sombre pour lisibilité du texte ── */
+.event-card::after {
+  content: '';
+  position: absolute;
+  inset: 0; /* top/right/bottom/left: 0 */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,    /* bas : très sombre (texte) */
+    rgba(0, 0, 0, 0.35) 55%,   /* milieu : semi-transparent */
+    rgba(0, 0, 0, 0.10) 100%   /* haut : presque transparent */
+  );
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+/* Au hover : overlay légèrement plus transparent pour révéler l'image */
+.event-card:hover::after {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.20) 55%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+/* Barre dorée en bas */
 .event-card::before {
   content: '';
   position: absolute;
@@ -434,15 +488,29 @@ body {
   width: 0; height: 2px;
   background: linear-gradient(90deg, var(--gold), var(--gold-light));
   transition: width 0.4s ease;
+  z-index: 2; /* au-dessus de l'overlay */
 }
 
 .event-card:hover::before { width: 100%; }
+
 .event-card:hover {
   border-color: var(--gold-dark);
   transform: translateY(-4px);
 }
 
-.event-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+/* Le contenu texte doit passer AU-DESSUS de l'overlay (z-index: 0) */
+.event-icon,
+.event-title,
+.event-desc {
+  position: relative;
+  z-index: 1;
+}
+
+.event-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  display: block;
+}
 
 .event-title {
   font-size: 1.25rem;

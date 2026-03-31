@@ -33,4 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(err => console.warn('⚠️ Service Worker échec:', err));
   }
 
+  // 8. Images de fond des event-cards
+  // Lit l'attribut data-bg-image de chaque carte et l'applique en CSS
+  document.querySelectorAll('.event-card[data-bg-image]').forEach(card => {
+    const imagePath = card.getAttribute('data-bg-image');
+    if (imagePath) {
+      card.style.backgroundImage = `url('${imagePath}')`;
+    }
+  });
+
 });
