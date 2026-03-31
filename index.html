@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<!-- 📄 Fichier : index.html -->
+<!-- 🎯 Rôle : Structure HTML complète du one-page vitrine Mercedes 230E -->
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prenajmite si historickú Mercedes-Benz 230E z roku 1983 na váš výnimočný deň." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>VILIM Classic Cars</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-black text-gray-100">
+
+<!-- ========== NAVIGATION ========== -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+
+      <!-- Logo -->
+      <a href="#hero" class="smooth-scroll flex flex-col leading-tight">
+        <span class="font-playfair text-gold text-xl md:text-2xl font-bold tracking-wider">VILIM Classic cars</span>
+        <span class="text-xs text-gray-500 font-inter font-light tracking-widest uppercase">Žilina - Slovakia</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8">
+        <a href="#vehicle"      class="nav-link smooth-scroll" data-i18n="nav.vehicle">Vozidlo</a>
+        <a href="#gallery"      class="nav-link smooth-scroll" data-i18n="nav.gallery">Galéria</a>
+        <a href="#events"       class="nav-link smooth-scroll" data-i18n="nav.events">Udalosti</a>
+        <a href="#how-it-works" class="nav-link smooth-scroll" data-i18n="nav.how">Ako to funguje</a>
+        <a href="#pricing"      class="nav-link smooth-scroll" data-i18n="nav.pricing">Cenník</a>
+        <a href="#contact"      class="nav-link smooth-scroll" data-i18n="nav.contact">Kontakt</a>
+      </div>
+
+      <!-- Lang + Hamburger -->
+      <div class="flex items-center gap-4">
+        <!-- Lang switcher -->
+        <div class="flex items-center gap-1">
+          <button class="lang-btn active" data-lang="sk">SK</button>
+          <span class="text-gray-600 text-xs">|</span>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <span class="text-gray-600 text-xs">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <!-- Hamburger -->
+        <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu overflow-hidden md:hidden">
+    <div class="px-4 py-2 border-t border-gray-800">
+      <a href="#vehicle"      class="mobile-nav-link smooth-scroll" data-i18n="nav.vehicle">Vozidlo</a>
+      <a href="#gallery"      class="mobile-nav-link smooth-scroll" data-i18n="nav.gallery">Galéria</a>
+      <a href="#events"       class="mobile-nav-link smooth-scroll" data-i18n="nav.events">Udalosti</a>
+      <a href="#how-it-works" class="mobile-nav-link smooth-scroll" data-i18n="nav.how">Ako to funguje</a>
+      <a href="#pricing"      class="mobile-nav-link smooth-scroll" data-i18n="nav.pricing">Cenník</a>
+      <a href="#contact"      class="mobile-nav-link smooth-scroll" data-i18n="nav.contact">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section id="hero" class="hero-section relative min-h-screen flex items-center justify-center">
+  <div class="hero-bg absolute inset-0"></div>
+  <div class="hero-overlay absolute inset-0"></div>
+
+  <!-- Image hero placeholder -->
+  <img src="assets/images/hero-placeholder.jpg"
+     alt="Mercedes-Benz 230E 1983"
+     class="absolute inset-0 w-full h-full object-cover opacity-60">
+
+  <div class="relative z-10 text-center max-w-4xl mx-auto px-4" data-aos="fade-up">
+    <p class="section-label mb-4" data-i18n="hero.tagline">Historické vozidlo na prenájom</p>
+    <h1 class="hero-title font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+      Mercedes<br/>
+      <span class="text-gold italic">230E</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-inter font-light leading-relaxed" data-i18n="hero.subtitle">
+      Prenajmite si kúsok histórie na váš výnimočný deň.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="btn-primary smooth-scroll relative z-10" data-i18n="hero.cta">Rezervovať termín</a>
+      <a href="#vehicle" class="btn-secondary smooth-scroll" data-i18n="hero.discover">Objaviť vozidlo</a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION : #vehicle — Présentation du véhicule
+     ============================================================ -->
+<section id="vehicle" class="py-24 bg-[#0e0e0e]">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- En-tête de section -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.25em] text-xs font-inter mb-3"
+         data-i18n="vehicle.subtitle">Naše vozidlo</p>
+      <h2 class="font-playfair text-4xl md:text-5xl text-[#f5f5f5] mb-5"
+          data-i18n="vehicle.title">Ikona nemeckej elegancie</h2>
+      <div class="w-12 h-px bg-gold mx-auto"></div>
+    </div>
+
+    <!-- Contenu principal : image + infos -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- ── Colonne gauche : Image ── -->
+      <div class="relative" data-aos="fade-right" data-aos-delay="100">
+        <div class="relative overflow-hidden">
+
+          <!-- Cadre décoratif doré (double trait) -->
+          <div class="absolute inset-0 border border-gold/20 z-10 pointer-events-none"></div>
+          <div class="absolute top-3 left-3 right-3 bottom-3 border border-gold/10 z-10 pointer-events-none"></div>
+
+          <!-- Photo principale -->
+          <img
+            src="assets/images/mercedes-main.jpg"
+            alt="Mercedes-Benz 230E 1983"
+            class="w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            style="aspect-ratio: 4/3;"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+
+          <!-- Placeholder si image absente -->
+          <div class="hidden w-full bg-[#141414] items-center justify-center"
+               style="aspect-ratio: 4/3;">
+            <div class="text-center">
+              <svg class="w-16 h-16 text-gold/30 mx-auto mb-3"
+                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2
+                     l1.586-1.586a2 2 0 012.828 0L20 14M6 20h12a2 2 0
+                     002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              <p class="text-[#9a9a9a] text-sm font-inter">
+                Mercedes-Benz 230E · 1983
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Légende sous image -->
+        <p class="text-center text-[#9a9a9a] text-xs font-inter
+                  tracking-widest uppercase mt-4">
+          Mercedes-Benz 230E · W123 · 1983
+        </p>
+      </div>
+
+      <!-- ── Colonne droite : Informations ── -->
+      <div data-aos="fade-left" data-aos-delay="200">
+
+        <!-- Description -->
+        <p class="font-inter text-[#b0b0b0] leading-relaxed text-[0.95rem] mb-10"
+           data-i18n="vehicle.description">
+          Mercedes-Benz 230E z roku 1983 je oveľa viac než automobil — je to symbol
+          nezničiteľnej kvality a nadčasovej elegancie, éry, v ktorej nemecké
+          inžinierstvo definovalo pojem trváčnosti.
+        </p>
+
+        <!-- Tableau des spécifications -->
+        <div class="mb-10">
+          <div class="grid grid-cols-2 divide-x divide-y divide-white/[0.06]
+                      border border-white/[0.06]">
+
+            <!-- Modèle -->
+            <div class="px-5 py-4 vehicle-spec-cell">
+              <p class="vehicle-spec-label" data-i18n="vehicle.specs.model.label">Modèle</p>
+              <p class="vehicle-spec-value" data-i18n="vehicle.specs.model.value">230E W123</p>
+            </div>
+
+            <!-- Année -->
+            <div class="px-5 py-4 vehicle-spec-cell">
+              <p class="vehicle-spec-label" data-i18n="vehicle.specs.year.label">Rok výroby</p>
+              <p class="vehicle-spec-value" data-i18n="vehicle.specs.year.value">1983</p>
+            </div>
+
+            <!-- Moteur -->
+            <div class="px-5 py-4 vehicle-spec-cell">
+              <p class="vehicle-spec-label" data-i18n="vehicle.specs.engine.label">Motor</p>
+              <p class="vehicle-spec-value" data-i18n="vehicle.specs.engine.value">2.3L · 136 hp</p>
+            </div>
+
+            <!-- Couleur -->
+            <div class="px-5 py-4 vehicle-spec-cell">
+              <p class="vehicle-spec-label" data-i18n="vehicle.specs.color.label">Farba</p>
+              <p class="vehicle-spec-value" data-i18n="vehicle.specs.color.value">Strieborná</p>
+            </div>
+
+            <!-- Sièges -->
+            <div class="px-5 py-4 vehicle-spec-cell">
+              <p class="vehicle-spec-label" data-i18n="vehicle.specs.seats.label">Sedadlá</p>
+              <p class="vehicle-spec-value" data-i18n="vehicle.specs.seats.value">5</p>
+            </div>
+
+            <!-- Catégorie -->
+            <div class="px-5 py-4 vehicle-spec-cell">
+              <p class="vehicle-spec-label" data-i18n="vehicle.specs.category.label">Kategória</p>
+              <p class="vehicle-spec-value vehicle-spec-value--gold"
+                 data-i18n="vehicle.specs.category.value">Historické</p>
+            </div>
+
+            <!-- Fabricant -->
+            <div class="px-5 py-4 vehicle-spec-cell">
+              <p class="vehicle-spec-label" data-i18n="vehicle.specs.manufacturer.label">Výrobca</p>
+              <p class="vehicle-spec-value" data-i18n="vehicle.specs.manufacturer.value">Mercedes-Benz</p>
+            </div>
+
+            <!-- Localité -->
+            <div class="px-5 py-4 vehicle-spec-cell">
+              <p class="vehicle-spec-label" data-i18n="vehicle.specs.location.label">Lokalita</p>
+              <p class="vehicle-spec-value" data-i18n="vehicle.specs.location.value">Žilinsky kraj, Slovensko</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Points forts -->
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="text-gold mt-0.5 shrink-0 select-none">—</span>
+            <span class="font-inter text-[0.9rem] text-[#b0b0b0]"
+                  data-i18n="vehicle.features.interior">
+              Zachované originálne interiérové detaily
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold mt-0.5 shrink-0 select-none">—</span>
+            <span class="font-inter text-[0.9rem] text-[#b0b0b0]"
+                  data-i18n="vehicle.features.condition">
+              Technicky bezchybný stav
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold mt-0.5 shrink-0 select-none">—</span>
+            <span class="font-inter text-[0.9rem] text-[#b0b0b0]"
+                  data-i18n="vehicle.features.photos">
+              Ideálne na svadobné fotografie
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold mt-0.5 shrink-0 select-none">—</span>
+            <span class="font-inter text-[0.9rem] text-[#b0b0b0]"
+                  data-i18n="vehicle.features.driver">
+              Profesionálny šofér k dispozícii
+            </span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== GALLERY ========== -->
+<section id="gallery" class="py-20 md:py-32 bg-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-label" data-i18n="gallery.label">Fotografie</p>
+      <h2 class="section-title font-playfair" data-i18n="gallery.title">Galéria</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <!-- Carousel -->
+    <div data-aos="fade-up">
+      <div id="carouselContainer" class="carousel-container mb-4">
+        <div id="carouselTrack" class="carousel-track">
+
+        <!-- Slide 1 -->
+        <div class="carousel-slide">
+          <img src="assets/images/gallery-1.jpg"
+              data-i18n-alt="gallery.alt1"
+              alt="Mercedes 230E - Pohľad spredu"
+              class="carousel-img"
+              style="cursor:zoom-in; height:500px; width:100%; object-fit:contain; background:#000;">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <img src="assets/images/gallery-2.jpg"
+              data-i18n-alt="gallery.alt2"
+              alt="Mercedes 230E - Pohľad zboku"
+              class="carousel-img"
+              style="cursor:zoom-in; height:500px; width:100%; object-fit:contain; background:#000;">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <img src="assets/images/gallery-3.jpg"
+              data-i18n-alt="gallery.alt3"
+              alt="Mercedes 230E - Interiér"
+              class="carousel-img"
+              style="cursor:zoom-in; height:500px; width:100%; object-fit:contain; background:#000;">
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+          <img src="assets/images/gallery-4.jpg"
+              data-i18n-alt="gallery.alt4"
+              alt="Mercedes 230E - Detail motora"
+              class="carousel-img"
+              style="cursor:zoom-in; height:500px; width:100%; object-fit:contain; background:#000;">
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-slide">
+          <img src="assets/images/gallery-5.jpg"
+              data-i18n-alt="gallery.alt5"
+              alt="Mercedes 230E - Pohľad zozadu"
+              class="carousel-img"
+              style="cursor:zoom-in; height:500px; width:100%; object-fit:contain; background:#000;">
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="carousel-slide">
+          <img src="assets/images/gallery-6.jpg"
+              data-i18n-alt="gallery.alt6"
+              alt="Mercedes 230E - Svadba"
+              class="carousel-img"
+              style="cursor:zoom-in; height:500px; width:100%; object-fit:contain; background:#000;">
+        </div>
+
+        </div>
+
+        <!-- Boutons -->
+        <button id="carouselPrev" class="carousel-btn carousel-prev" aria-label="Précédent">&#8592;</button>
+        <button id="carouselNext" class="carousel-btn carousel-next" aria-label="Suivant">&#8594;</button>
+
+        <!-- Indicateurs -->
+        <div id="carouselIndicators" class="carousel-indicators"></div>
+      </div>
+
+      <!-- Thumbnails -->
+      <div class="grid grid-cols-6 gap-2">
+        <div class="thumb-item">
+          <img src="assets/images/gallery-1.jpg"
+              data-i18n-alt="gallery.alt1"
+              alt="Mercedes 230E - Pohľad spredu"
+              class="thumb-img">
+        </div>
+        <div class="thumb-item">
+          <img src="assets/images/gallery-2.jpg"
+              data-i18n-alt="gallery.alt2"
+              alt="Mercedes 230E - Pohľad zboku"
+              class="thumb-img">
+        </div>
+        <div class="thumb-item">
+          <img src="assets/images/gallery-3.jpg"
+              data-i18n-alt="gallery.alt3"
+              alt="Mercedes 230E - Interiér"
+              class="thumb-img">
+        </div>
+        <div class="thumb-item">
+          <img src="assets/images/gallery-4.jpg"
+              data-i18n-alt="gallery.alt4"
+              alt="Mercedes 230E - Detail motora"
+              class="thumb-img">
+        </div>
+        <div class="thumb-item">
+          <img src="assets/images/gallery-5.jpg"
+              data-i18n-alt="gallery.alt5"
+              alt="Mercedes 230E - Pohľad zozadu"
+              class="thumb-img">
+        </div>
+        <div class="thumb-item">
+          <img src="assets/images/gallery-6.jpg"
+              data-i18n-alt="gallery.alt6"
+              alt="Mercedes 230E - Svadba"
+              class="thumb-img">
+        </div>
+      </div>
+
+
+
+  </div>
+</section>
+
+
+<!-- ========== EVENTS ========== -->
+<section id="events" class="py-20 md:py-32 bg-section-alt">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-label" data-i18n="events.label">Príležitosti</p>
+      <h2 class="section-title font-playfair" data-i18n="events.title">Pre každú výnimočnú udalosť</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="event-card" data-aos="fade-up" data-aos-delay="0">
+        <span class="event-icon">💍</span>
+        <h3 class="event-title" data-i18n="events.wedding.title">Svadba</h3>
+        <p class="event-desc" data-i18n="events.wedding.desc">Príďte na váš svadobný deň v štýle a elegancii legendárneho Mercedesu.</p>
+      </div>
+      <div class="event-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="event-icon">🎂</span>
+        <h3 class="event-title" data-i18n="events.birthday.title">Narodeniny</h3>
+        <p class="event-desc" data-i18n="events.birthday.desc">Spravte zo svojich narodenín nezabudnuteľný zážitok s nádychom luxusu.</p>
+      </div>
+      <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="event-icon">📷</span>
+        <h3 class="event-title" data-i18n="events.photo.title">Fotenie</h3>
+        <p class="event-desc" data-i18n="events.photo.desc">Dokonalé pozadie pre vaše módne, reklamné alebo osobné fotografické projekty.</p>
+      </div>
+      <div class="event-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="event-icon">✨</span>
+        <h3 class="event-title" data-i18n="events.other.title">Iné udalosti</h3>
+        <p class="event-desc" data-i18n="events.other.desc">Firemné akcie, filmy, výstavy... Kontaktujte nás pre individuálnu ponuku.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== HOW IT WORKS ========== -->
+<section id="how-it-works" class="py-20 md:py-32 bg-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-label" data-i18n="how.label">Proces</p>
+      <h2 class="section-title font-playfair" data-i18n="how.title">Ako to funguje?</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+
+      <!-- Ligne connecteur desktop -->
+      <div class="hidden lg:block absolute top-12 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-30" style="left:12.5%; right:12.5%;"></div>
+
+      <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-number">01</div>
+        <h3 class="step-title" data-i18n="how.step1.title">Kontaktujte nás</h3>
+        <p class="step-desc" data-i18n="how.step1.desc">Pošlite nám správu alebo zavolajte so svojou požiadavkou a požadovaným dátumom.</p>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-number">02</div>
+        <h3 class="step-title" data-i18n="how.step2.title">Dohodnem detaily</h3>
+        <p class="step-desc" data-i18n="how.step2.desc">Preberieme trasu, čas, miesto a všetky vaše špeciálne požiadavky.</p>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-number">03</div>
+        <h3 class="step-title" data-i18n="how.step3.title">Potvrdenie rezervácie</h3>
+        <p class="step-desc" data-i18n="how.step3.desc">Po dohode potvrdíme rezerváciu a dátum je váš.</p>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-number">04</div>
+        <h3 class="step-title" data-i18n="how.step4.title">Váš výnimočný deň</h3>
+        <p class="step-desc" data-i18n="how.step4.desc">Vychutnajte si každý moment s eleganciou a štýlom legendárneho Mercedesu.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section id="pricing" class="py-20 md:py-32 bg-section-alt">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-label" data-i18n="pricing.label">Cenník</p>
+      <h2 class="section-title font-playfair" data-i18n="pricing.title">Naše balíčky</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+
+      <!-- Basic -->
+      <div class="price-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="price-header">
+          <p class="price-tier" data-i18n="pricing.basic.tier">Základný</p>
+          <h3 class="price-name font-playfair" data-i18n="pricing.basic.name">Krátka jazda</h3>
+          <div class="price-amount">
+            <span class="price-currency">€</span>
+            <span class="price-value">150</span>
+          </div>
+          <span class="price-period text-gray-500 text-sm" data-i18n="pricing.basic.period">/ do 2h</span>
+        </div>
+        <div class="price-divider"></div>
+        <ul class="price-features mb-6">
+          <li class="price-feature" data-i18n="pricing.basic.f1">Zilinsky kraj</li>
+          <li class="price-feature" data-i18n="pricing.basic.f2">Fotenie pred svadbou</li>
+          <li class="price-feature" data-i18n="pricing.basic.f3">odvoz na obrad a z obradu</li>
+          <li class="price-feature" data-i18n="pricing.basic.f4">Profesionálny vodič k dispozicii az po slavnostny obed</li>
+            <!-- Extra -->
+           <li class="price-feature-extras-divider">
+            <span data-i18n="pricing.extras.label">za priplatok</span>
+          </li>
+          <li class="price-feature price-feature--extra">Vyzdoba vozidla — 50 €</li>
+          <li class="price-feature price-feature--extra">Chladené šampanské — 20 €</li>
+        </ul>
+        <a href="#contact" class="btn-secondary smooth-scroll w-full text-center block" data-i18n="pricing.basic.cta">Rezervovať</a>
+      </div>
+
+      <!-- Premium (featured) -->
+      <div class="price-card price-card-featured" data-aos="fade-up" data-aos-delay="100">
+        <div class="price-header">
+          <p class="price-tier" data-i18n="pricing.premium.tier">Najpopulárnejší</p>
+          <h3 class="price-name font-playfair" data-i18n="pricing.premium.name">Svadobný deň</h3>
+          <div class="price-amount">
+            <span class="price-currency">€</span>
+            <span class="price-value">350</span>
+          </div>
+          <span class="price-period text-gray-500 text-sm" data-i18n="pricing.premium.period">/ pol dňa</span>
+        </div>
+        <div class="price-divider"></div>
+        <ul class="price-features mb-6">
+          <li class="price-feature" data-i18n="pricing.premium.f1">Celé Slovensko</li>
+          <li class="price-feature" data-i18n="pricing.premium.f2">Fotenie pred svadbou</li>
+          <li class="price-feature" data-i18n="pricing.premium.f3">odvoz na obrad a z obradu</li>
+          <li class="price-feature" data-i18n="pricing.premium.f4">Profesionálny vodič k dispozicii az po slavnostny obed</li>
+            <!-- Extra -->
+           <li class="price-feature-extras-divider">
+            <span data-i18n="pricing.extras.label">za priplatok</span>
+          </li>
+          <li class="price-feature price-feature--extra">Vyzdoba vozidla — 50 €</li>
+          <li class="price-feature price-feature--extra">Chladené šampanské — 20 €</li>
+        </ul>
+        <a href="#contact" class="btn-primary smooth-scroll w-full text-center block relative z-10" data-i18n="pricing.premium.cta">Rezervovať</a>
+      </div>
+
+      <!-- VIP -->
+      <div class="price-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="price-header">
+          <p class="price-tier" data-i18n="pricing.vip.tier">VIP</p>
+          <h3 class="price-name font-playfair" data-i18n="pricing.vip.name">Celý deň</h3>
+          <div class="price-amount">
+            <span class="price-currency">€</span>
+            <span class="price-value">XXX</span>
+          </div>
+          <span class="price-period text-gray-500 text-sm" data-i18n="pricing.vip.period">/ celý deň</span>
+        </div>
+        <div class="price-divider"></div>
+        <ul class="price-features mb-6">
+          <li class="price-feature" data-i18n="pricing.vip.f1">fotenie, expozicia</li>
+          <li class="price-feature" data-i18n="pricing.vip.f2">nakrucanie filmov, komparz</li>
+          <li class="price-feature" data-i18n="pricing.vip.f3">hudobne vidoeklipy</li>
+          <li class="price-feature" data-i18n="pricing.vip.f4">reklamné spoty</li>
+          <li class="price-feature" data-i18n="pricing.vip.f5">nevahajte nas kontaktovat z akymkolvek vasim napadom, ochotne s vami preberieme moznosti a realizaciu</li>
+          <li class="price-feature" data-i18n="pricing.vip.f6">cena bude kompletne personalizovana podla vaseho projektu</li>
+        </ul>
+        <a href="#contact" class="btn-secondary smooth-scroll w-full text-center block" data-i18n="pricing.vip.cta">Kontaktovať nás</a>
+      </div>
+
+    </div>
+
+    <p class="text-center text-gray-500 text-sm mt-10 max-w-2xl mx-auto font-inter" data-i18n="pricing.note" data-aos="fade-up">
+      * Ceny sú orientačné. Konečná cena závisí od vzdialenosti a požiadaviek. Kontaktujte nás pre individuálnu cenovú ponuku.
+    </p>
+
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="py-20 md:py-32 bg-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-label" data-i18n="contact.label">Kontaktujte nás</p>
+      <h2 class="section-title font-playfair" data-i18n="contact.title">Rezervácia</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+      <!-- Info -->
+      <div class="contact-info-box" data-aos="fade-right">
+        <h3 class="contact-info-title font-playfair" data-i18n="contact.infoTitle">Informácie</h3>
+        <p class="contact-info-subtitle" data-i18n="contact.infoSubtitle">
+          Sme tu pre vás. Neváhajte nás kontaktovať pre akékoľvek otázky alebo rezervácie.
+        </p>
+
+        <div class="contact-info-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <p class="contact-info-label" data-i18n="contact.address">Adresa</p>
+            <p class="contact-info-value">Žilina, Slovensko</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <p class="contact-info-label" data-i18n="contact.phone">Telefón</p>
+            <a href="tel:+421911700778" class="contact-info-value hover:text-gold transition-colors">+421 911 700 778</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <p class="contact-info-label" data-i18n="contact.email">Email</p>
+            <a href="mailto:mike97423@gmail.com" class="contact-info-value hover:text-gold transition-colors">mike97423@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Décoratif -->
+        <div class="mt-8 p-6 border border-gray-800 text-center">
+          <p class="font-playfair text-gold text-2xl italic mb-2">Vilím Jozef</p>
+          <p class="text-gray-500 text-sm font-inter tracking-widest uppercase">Propriétaire · Vlastník</p>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div data-aos="fade-left">
+        <form id="contactForm" class="contact-form space-y-5" novalidate>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="form-group">
+              <label class="form-label" for="fieldFirstName" data-i18n="form.firstName">Meno</label>
+              <input id="fieldFirstName" type="text" class="form-input" data-i18n-placeholder="form.firstNamePh" placeholder="Ján" />
+              <span class="form-error" id="fieldFirstNameError"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fieldLastName" data-i18n="form.lastName">Priezvisko</label>
+              <input id="fieldLastName" type="text" class="form-input" data-i18n-placeholder="form.lastNamePh" placeholder="Novák" />
+              <span class="form-error" id="fieldLastNameError"></span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="form-group">
+              <label class="form-label" for="fieldEmail" data-i18n="form.email">Email</label>
+              <input id="fieldEmail" type="email" class="form-input" data-i18n-placeholder="form.emailPh" placeholder="jan@example.com" />
+              <span class="form-error" id="fieldEmailError"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fieldPhone" data-i18n="form.phone">Telefón</label>
+              <input id="fieldPhone" type="tel" class="form-input" data-i18n-placeholder="form.phonePh" placeholder="+421 900 000 000" />
+              <span class="form-error" id="fieldPhoneError"></span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="form-group">
+              <label class="form-label" for="fieldEventType" data-i18n="form.eventType">Typ udalosti</label>
+              <select id="fieldEventType" class="form-input">
+                <option value="" data-i18n="form.eventSelect">-- Vyberte typ --</option>
+                <option value="wedding"  data-i18n="form.eventWedding">Svadba Zilinsky kraj</option>
+                <option value="birthday" data-i18n="form.eventBirthday">Svadba celé Slovensko</option>
+                <option value="photo"    data-i18n="form.eventPhoto">Vas projekt</option>
+              </select>
+              <span class="form-error" id="fieldEventTypeError"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fieldDate" data-i18n="form.date">Dátum udalosti</label>
+              <input id="fieldDate" type="date" class="form-input" />
+              <span class="form-error" id="fieldDateError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="fieldMessage" data-i18n="form.message">Správa</label>
+            <textarea id="fieldMessage" class="form-input form-textarea" data-i18n-placeholder="form.messagePh" placeholder="Popíšte vašu udalosť..."></textarea>
+            <span class="form-error" id="fieldMessageError"></span>
+          </div>
+
+          <div id="formSuccess" class="form-success hidden"></div>
+          <div id="formError"   class="form-error-global hidden"></div>
+
+          <button type="submit" class="btn-primary w-full text-center relative z-10" data-i18n="form.submit">
+            Odoslať správu
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-black border-t border-gray-800 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+
+      <!-- Brand -->
+      <div>
+        <p class="font-playfair text-gold text-2xl font-bold mb-2">VILIM Classic cars</p>
+        <p class="text-gray-500 text-xs tracking-widest uppercase mb-4"> Žilina - Slovakia</p>
+        <p class="text-gray-500 text-sm font-inter leading-relaxed" data-i18n="footer.tagline">
+          <em>"Elegancia nie je o tom, aby si bol spozorovaný, ale aby si bol zapamätaný."</em> — Giorgio Armani
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <p class="text-xs font-semibold tracking-widest uppercase text-gold mb-4" data-i18n="footer.links">Rýchle odkazy</p>
+        <ul class="space-y-2">
+          <li><a href="#vehicle"      class="footer-link smooth-scroll" data-i18n="nav.vehicle">Vozidlo</a></li>
+          <li><a href="#gallery"      class="footer-link smooth-scroll" data-i18n="nav.gallery">Galéria</a></li>
+          <li><a href="#events"       class="footer-link smooth-scroll" data-i18n="nav.events">Udalosti</a></li>
+          <li><a href="#pricing"      class="footer-link smooth-scroll" data-i18n="nav.pricing">Cenník</a></li>
+          <li><a href="#contact"      class="footer-link smooth-scroll" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p class="text-xs font-semibold tracking-widest uppercase text-gold mb-4" data-i18n="footer.contact">Kontakt</p>
+        <ul class="space-y-3 text-sm text-gray-500 font-inter">
+          <li class="flex items-center gap-2">
+            <span>📍</span> Žilina - Slovakia
+          </li>
+          <li class="flex items-center gap-2">
+            <span>📞</span>
+            <a href="tel:+421911700778" class="footer-link">+421 911 700 778</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span>✉️</span>
+            <a href="mailto:mike97423@gmail.com" class="footer-link">mike97423@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-800
+    <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-gray-600 text-xs font-inter" data-i18n="footer.rights">
+        © 2026 VILIM Classic cars.
+      </p>
+      <p class="text-gray-700 text-xs font-inter">
+        Made by JD 
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ========== LIGHTBOX ========== -->
+<div id="lightbox" class="hidden fixed inset-0 z-[100] flex items-center justify-center">
+  <div id="lightboxOverlay" class="absolute inset-0 bg-black bg-opacity-95"></div>
+
+  <!-- Image -->
+  <div class="relative z-10 max-w-5xl w-full mx-4">
+    <img id="lightboxImg" src="" alt="" class="w-full max-h-[80vh] object-contain mx-auto block" />
+    <p id="lightboxCaption" class="text-center text-gray-400 text-sm mt-4 font-inter"></p>
+  </div>
+
+  <!-- Fermer -->
+  <button id="lightboxClose"
+    class="absolute top-4 right-4 z-20 text-gray-400 hover:text-gold transition-colors text-3xl leading-none"
+    aria-label="Fermer">
+    &times;
+  </button>
+
+  <!-- Prev -->
+  <button id="lightboxPrev"
+    class="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-gray-400 hover:text-gold transition-colors text-4xl"
+    aria-label="Précédent">
+    &#8592;
+  </button>
+
+  <!-- Next -->
+  <button id="lightboxNext"
+    class="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-gray-400 hover:text-gold transition-colors text-4xl"
+    aria-label="Suivant">
+    &#8594;
+  </button>
+</div>
+
+<!-- ========== MOBILE MENU ========== -->
+<div id="mobileMenu" class="fixed inset-0 z-40 hidden">
+  <div class="absolute inset-0 bg-black bg-opacity-98"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center h-full gap-8">
+    <a href="#vehicle"      class="mobile-nav-link smooth-scroll" data-i18n="nav.vehicle">Vozidlo</a>
+    <a href="#gallery"      class="mobile-nav-link smooth-scroll" data-i18n="nav.gallery">Galéria</a>
+    <a href="#events"       class="mobile-nav-link smooth-scroll" data-i18n="nav.events">Udalosti</a>
+    <a href="#how-it-works" class="mobile-nav-link smooth-scroll" data-i18n="nav.how">Ako to funguje</a>
+    <a href="#pricing"      class="mobile-nav-link smooth-scroll" data-i18n="nav.pricing">Cenník</a>
+    <a href="#contact"      class="mobile-nav-link smooth-scroll" data-i18n="nav.contact">Kontakt</a>
+
+    <!-- Lang switcher mobile -->
+    <div class="flex items-center gap-3 mt-4">
+      <button class="lang-btn text-base active" data-lang="sk">SK</button>
+      <span class="text-gray-600">|</span>
+      <button class="lang-btn text-base" data-lang="fr">FR</button>
+      <span class="text-gray-600">|</span>
+      <button class="lang-btn text-base" data-lang="en">EN</button>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/form.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
