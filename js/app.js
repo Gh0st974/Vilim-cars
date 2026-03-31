@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Formulaire de contact
   Form.init();
 
-  // 6. AOS — Animate On Scroll
+    // 6. Parallax background
+  Parallax.init();
+  // 7. AOS — Animate On Scroll
   AOS.init({
     duration: 800,
     easing: 'ease-out-cubic',
@@ -26,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
     offset: 60,
   });
 
-  // 7. Enregistrement du Service Worker (PWA)
+  // 8. Enregistrement du Service Worker (PWA)
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js')
       .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
       .catch(err => console.warn('⚠️ Service Worker échec:', err));
   }
 
-  // 8. Images de fond des event-cards
+  // 9. Images de fond des event-cards
   // Lit l'attribut data-bg-image de chaque carte et l'applique en CSS
   document.querySelectorAll('.event-card[data-bg-image]').forEach(card => {
     const imagePath = card.getAttribute('data-bg-image');

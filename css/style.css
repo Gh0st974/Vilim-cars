@@ -30,6 +30,59 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== PARALLAX BACKGROUND ===== */
+#parallax-bg {
+  position: fixed;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 140vh;
+  background-image: url('../assets/images/Parallax-JS.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease;
+}
+
+@media (max-width: 768px) {
+  #parallax-bg { display: none; }
+}
+
+/* ===== Z-INDEX STACKING ===== */
+/* Toutes les sections passent au-dessus du parallax */
+#navbar,
+#hero,
+#vehicle,
+#gallery,
+#events,
+#how-it-works,
+#pricing,
+#contact,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== FONDS SEMI-TRANSPARENTS (laissent passer le parallax) ===== */
+#vehicle,
+#gallery,
+#events,
+#how-it-works,
+#pricing,
+#contact,
+footer {
+  background-color: rgba(10, 10, 10, 0.88) !important;
+}
+
+/* Le hero doit être transparent pour que le parallax soit visible */
+#hero {
+  background-color: transparent !important;
+}
+
 /* ===== COLORS UTILITIES ===== */
 .text-gold      { color: var(--gold); }
 .bg-section-alt { background-color: var(--dark); }
@@ -143,10 +196,28 @@ body {
 .mobile-nav-link:hover { color: var(--gold); }
 
 /* ===== HERO ===== */
-.hero-section { background-color: var(--black); }
+/*
+ * Le hero est transparent pour laisser passer le parallax.
+ * .hero-bg apporte une légère teinte dorée semi-transparente.
+ * .hero-overlay assombrit vers le bas pour la lisibilité du texte.
+ */
+
+#hero {
+  background-color: var(--black) !important;
+  z-index: 2;
+}
+
+.hero-section {
+  background-color: transparent;
+}
 
 .hero-bg {
-  background: linear-gradient(135deg, #1a1208 0%, #0a0a0a 50%, #0d0d0d 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(26, 18, 8, 0.55) 0%,
+    rgba(10, 10, 10, 0.40) 50%,
+    rgba(13, 13, 13, 0.45) 100%
+  );
 }
 
 .hero-bg::before {
@@ -161,9 +232,9 @@ body {
 .hero-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(10,10,10,0.3) 0%,
-    rgba(10,10,10,0.5) 50%,
-    rgba(10,10,10,0.8) 100%
+    rgba(10,10,10,0.2) 0%,
+    rgba(10,10,10,0.45) 50%,
+    rgba(10,10,10,0.75) 100%
   );
 }
 
@@ -276,11 +347,7 @@ body {
   margin: 0 auto;
 }
 
-/* ============================================================
-   SECTION : #vehicle
-   ============================================================ */
-
-/* Zoom image au hover */
+/* ===== SECTION : #vehicle ===== */
 #vehicle img {
   transition: transform 0.7s ease, filter 0.7s ease;
 }
@@ -289,7 +356,6 @@ body {
   transform: scale(1.02);
 }
 
-/* Cellule du tableau de spécifications */
 .vehicle-spec-cell {
   transition: background-color 0.25s ease;
 }
@@ -298,7 +364,6 @@ body {
   background-color: rgba(201, 168, 76, 0.04);
 }
 
-/* Label de spec : petit, uppercase, grisé */
 .vehicle-spec-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.65rem;
@@ -309,7 +374,6 @@ body {
   margin-bottom: 0.25rem;
 }
 
-/* Valeur de spec : claire, lisible */
 .vehicle-spec-value {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
@@ -318,11 +382,9 @@ body {
   color: #f5f5f5;
 }
 
-/* Variante dorée (ex: catégorie "Historické") */
 .vehicle-spec-value--gold {
   color: #c9a84c;
 }
-
 
 /* ===== CAROUSEL ===== */
 .carousel-container {
@@ -418,59 +480,36 @@ body {
 
 /* ===== EVENT CARDS ===== */
 .event-card {
-  /* Fond de secours si pas d'image */
   background-color: var(--dark-alt);
   background-repeat: no-repeat;
   background-position: center center;
-
-  /*
-   * ─── CHOIX DU MODE D'AFFICHAGE DE TON IMAGE ───────────────────────
-   *
-   * "contain" → L'image entière est visible, sans recadrage, sans zoom.
-   *             Des bandes noires peuvent apparaître sur les côtés
-   *             si le ratio de l'image ≠ ratio de la carte.
-   *             👉 RECOMMANDÉ si tu veux voir l'image en entier.
-   *
-   * "cover"   → L'image remplit toute la carte. Elle peut être rognée
-   *             sur les bords si le ratio ne correspond pas.
-   *
-   * Décommente l'une des deux lignes ci-dessous :
-   */
-  background-size: cover;   /* ← image entière, sans zoom */
-  /* background-size: cover; */
-
+  background-size: cover;
   border: 1px solid var(--gray-border);
   padding: 32px 24px;
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-
-  /* Hauteur minimale pour que la carte ait de la substance */
   min-height: 280px;
-
-  /* Centre le contenu verticalement */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-/* ── Overlay sombre pour lisibilité du texte ── */
 .event-card::after {
   content: '';
   position: absolute;
-  inset: 0; /* top/right/bottom/left: 0 */
+  inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.82) 0%,    /* bas : très sombre (texte) */
-    rgba(0, 0, 0, 0.35) 55%,   /* milieu : semi-transparent */
-    rgba(0, 0, 0, 0.10) 100%   /* haut : presque transparent */
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    rgba(0, 0, 0, 0.10) 100%
   );
   transition: background 0.3s ease;
   z-index: 0;
 }
 
-/* Au hover : overlay légèrement plus transparent pour révéler l'image */
 .event-card:hover::after {
   background: linear-gradient(
     to top,
@@ -480,7 +519,6 @@ body {
   );
 }
 
-/* Barre dorée en bas */
 .event-card::before {
   content: '';
   position: absolute;
@@ -488,7 +526,7 @@ body {
   width: 0; height: 2px;
   background: linear-gradient(90deg, var(--gold), var(--gold-light));
   transition: width 0.4s ease;
-  z-index: 2; /* au-dessus de l'overlay */
+  z-index: 2;
 }
 
 .event-card:hover::before { width: 100%; }
@@ -498,7 +536,6 @@ body {
   transform: translateY(-4px);
 }
 
-/* Le contenu texte doit passer AU-DESSUS de l'overlay (z-index: 0) */
 .event-icon,
 .event-title,
 .event-desc {
@@ -648,7 +685,6 @@ body {
   list-style: none;
   padding: 0;
   margin-bottom: 24px;
-  space-y: 8px;
 }
 
 .price-feature {
@@ -669,7 +705,6 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Séparateur "Extras disponibles" ── */
 .price-feature-extras-divider {
   display: flex;
   align-items: center;
@@ -695,7 +730,6 @@ body {
   white-space: nowrap;
 }
 
-/* Puce "extra" — variante avec + doré */
 .price-feature--extra::before {
   content: '+';
   font-size: 0.6rem;
@@ -710,7 +744,7 @@ body {
   justify-content: center;
 }
 
-/* ===== CONTACT SECTION ===== */
+/* ===== CONTACT ===== */
 .contact-info-box {
   background: var(--dark-alt);
   border: 1px solid var(--gray-border);
@@ -761,8 +795,6 @@ body {
 }
 
 /* ===== CONTACT FORM ===== */
-.contact-form { }
-
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 
 .form-label {
@@ -932,7 +964,6 @@ body {
   text-align: center;
   margin-top: 8px;
 }
-
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
