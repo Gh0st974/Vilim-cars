@@ -776,7 +776,11 @@ footer {
   border-bottom: 1px solid var(--gray-border);
 }
 
-.contact-icon { font-size: 1.25rem; margin-top: 2px; flex-shrink: 0; }
+/* font-size supprimé — inutile avec <img> */
+.contact-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
 
 .contact-info-label {
   font-size: 0.7rem;
@@ -793,6 +797,16 @@ footer {
   color: var(--text-main);
   text-decoration: none;
 }
+
+/* Icônes contact */
+.contact-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block; /* évite l'espace parasite sous l'image */
+  filter: brightness(0) invert(1); /* force le blanc */
+}
+
 
 /* ===== CONTACT FORM ===== */
 .form-group { display: flex; flex-direction: column; gap: 6px; }
