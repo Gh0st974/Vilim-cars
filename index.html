@@ -759,71 +759,83 @@
       </div>
 
       <!-- Formulaire -->
-      <div data-aos="fade-left">
-        <form id="contactForm" class="contact-form space-y-5" novalidate>
+      <!-- Formulaire -->
+        <div data-aos="fade-left">
+          <form 
+            id="contactForm" 
+            class="contact-form space-y-5" 
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div class="form-group">
-              <label class="form-label" for="fieldFirstName" data-i18n="form.firstName">Meno</label>
-              <input id="fieldFirstName" type="text" class="form-input" data-i18n-placeholder="form.firstNamePh" placeholder="Ján" />
-              <span class="form-error" id="fieldFirstNameError"></span>
+            <!-- Champs cachés obligatoires pour Netlify -->
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Ne pas remplir : <input name="bot-field" /></label>
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="form-group">
+                <label class="form-label" for="fieldFirstName" data-i18n="form.firstName">Meno</label>
+                <input id="fieldFirstName" name="firstName" type="text" class="form-input" data-i18n-placeholder="form.firstNamePh" placeholder="Ján" />
+                <span class="form-error" id="fieldFirstNameError"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fieldLastName" data-i18n="form.lastName">Priezvisko</label>
+                <input id="fieldLastName" name="lastName" type="text" class="form-input" data-i18n-placeholder="form.lastNamePh" placeholder="Novák" />
+                <span class="form-error" id="fieldLastNameError"></span>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="fieldLastName" data-i18n="form.lastName">Priezvisko</label>
-              <input id="fieldLastName" type="text" class="form-input" data-i18n-placeholder="form.lastNamePh" placeholder="Novák" />
-              <span class="form-error" id="fieldLastNameError"></span>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="form-group">
+                <label class="form-label" for="fieldEmail" data-i18n="form.email">Email</label>
+                <input id="fieldEmail" name="email" type="email" class="form-input" data-i18n-placeholder="form.emailPh" placeholder="jan@example.com" />
+                <span class="form-error" id="fieldEmailError"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fieldPhone" data-i18n="form.phone">Telefón</label>
+                <input id="fieldPhone" name="phone" type="tel" class="form-input" data-i18n-placeholder="form.phonePh" placeholder="+421 900 000 000" />
+                <span class="form-error" id="fieldPhoneError"></span>
+              </div>
             </div>
-          </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div class="form-group">
-              <label class="form-label" for="fieldEmail" data-i18n="form.email">Email</label>
-              <input id="fieldEmail" type="email" class="form-input" data-i18n-placeholder="form.emailPh" placeholder="jan@example.com" />
-              <span class="form-error" id="fieldEmailError"></span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="form-group">
+                <label class="form-label" for="fieldEventType" data-i18n="form.eventType">Typ udalosti</label>
+                <select id="fieldEventType" name="eventType" class="form-input">
+                  <option value="" data-i18n="form.eventSelect">-- Vyberte typ --</option>
+                  <option value="wedding"  data-i18n="form.eventWedding">Svadba Zilinsky kraj</option>
+                  <option value="birthday" data-i18n="form.eventBirthday">Svadba celé Slovensko</option>
+                  <option value="photo"    data-i18n="form.eventPhoto">Vas projekt</option>
+                </select>
+                <span class="form-error" id="fieldEventTypeError"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fieldDate" data-i18n="form.date">Dátum udalosti</label>
+                <input id="fieldDate" name="date" type="date" class="form-input" />
+                <span class="form-error" id="fieldDateError"></span>
+              </div>
             </div>
+
             <div class="form-group">
-              <label class="form-label" for="fieldPhone" data-i18n="form.phone">Telefón</label>
-              <input id="fieldPhone" type="tel" class="form-input" data-i18n-placeholder="form.phonePh" placeholder="+421 900 000 000" />
-              <span class="form-error" id="fieldPhoneError"></span>
+              <label class="form-label" for="fieldMessage" data-i18n="form.message">Správa</label>
+              <textarea id="fieldMessage" name="message" class="form-input form-textarea" data-i18n-placeholder="form.messagePh" placeholder="Popíšte vašu udalosť..."></textarea>
+              <span class="form-error" id="fieldMessageError"></span>
             </div>
-          </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div class="form-group">
-              <label class="form-label" for="fieldEventType" data-i18n="form.eventType">Typ udalosti</label>
-              <select id="fieldEventType" class="form-input">
-                <option value="" data-i18n="form.eventSelect">-- Vyberte typ --</option>
-                <option value="wedding"  data-i18n="form.eventWedding">Svadba Zilinsky kraj</option>
-                <option value="birthday" data-i18n="form.eventBirthday">Svadba celé Slovensko</option>
-                <option value="photo"    data-i18n="form.eventPhoto">Vas projekt</option>
-              </select>
-              <span class="form-error" id="fieldEventTypeError"></span>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="fieldDate" data-i18n="form.date">Dátum udalosti</label>
-              <input id="fieldDate" type="date" class="form-input" />
-              <span class="form-error" id="fieldDateError"></span>
-            </div>
-          </div>
+            <div id="formSuccess" class="form-success hidden"></div>
+            <div id="formError"   class="form-error-global hidden"></div>
 
-          <div class="form-group">
-            <label class="form-label" for="fieldMessage" data-i18n="form.message">Správa</label>
-            <textarea id="fieldMessage" class="form-input form-textarea" data-i18n-placeholder="form.messagePh" placeholder="Popíšte vašu udalosť..."></textarea>
-            <span class="form-error" id="fieldMessageError"></span>
-          </div>
+            <button type="submit" class="btn-primary w-full text-center relative z-10" data-i18n="form.submit">
+              Odoslať správu
+            </button>
 
-          <div id="formSuccess" class="form-success hidden"></div>
-          <div id="formError"   class="form-error-global hidden"></div>
+          </form>
+        </div>
 
-          <button type="submit" class="btn-primary w-full text-center relative z-10" data-i18n="form.submit">
-            Odoslať správu
-          </button>
-
-        </form>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 <!-- ========== FOOTER ========== -->
