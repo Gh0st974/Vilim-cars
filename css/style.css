@@ -1022,6 +1022,83 @@ html, body {
   .hero-title { font-size: 2.2rem; }
 }
 
+/* ===== NAVIGATION — Fix paysage mobile ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+
+  /* Réduit la taille du logo pour tenir sur une ligne */
+  #navbar .font-playfair {
+    font-size: 0.95rem !important;
+    white-space: nowrap;
+  }
+
+  /* Masque le sous-titre "Žilina - Slovakia" — pas essentiel en paysage */
+  #navbar .text-xs.text-gray-500 {
+    display: none !important;
+  }
+
+  /* Réduit les gaps internes de la navbar */
+  #navbar .flex.items-center.justify-between {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+
+/* ===== HERO — Fix superposition navbar en paysage mobile ===== */
+
+/*
+  En portrait  : la navbar fait ~64px (h-16 Tailwind)
+  En paysage mobile : la navbar peut varier — on ajoute un padding-top
+  pour que le contenu centré ne remonte jamais derrière la barre
+*/
+@media (max-height: 500px) and (orientation: landscape) {
+
+  #hero {
+    /* 
+      min-h-screen reste, mais on force le contenu à démarrer 
+      sous la navbar grâce à un padding-top = hauteur navbar ~56px 
+    */
+    padding-top: 56px;
+    /* 
+      En paysage l'écran est court : on aligne le contenu en haut 
+      plutôt qu'au centre pour éviter l'écrasement vertical 
+    */
+    align-items: flex-start !important;
+  }
+
+  /* Réduit les tailles de texte du hero en paysage mobile */
+  #hero h1 {
+    font-size: 2.5rem !important;  /* text-5xl → text-4xl équivalent */
+    margin-bottom: 0.75rem !important;
+  }
+
+  #hero .section-label {
+    margin-bottom: 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  #hero p.text-lg {
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Réduit le padding vertical du conteneur hero */
+  #hero .relative.z-10 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* Boutons en ligne directement, pas en colonne */
+  #hero .flex-col {
+    flex-direction: row !important;
+  }
+
+  /* Masque l'indicateur de scroll — pas de place en paysage */
+  #hero .absolute.bottom-8 {
+    display: none !important;
+  }
+}
+
 /* ===== AOS CUSTOM ===== */
 [data-aos] { pointer-events: none; }
 [data-aos].aos-animate { pointer-events: auto; }
