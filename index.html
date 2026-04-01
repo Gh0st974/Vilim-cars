@@ -23,29 +23,29 @@
 <div id="parallax-bg" aria-hidden="true"></div>
 
 <!-- ========== NAVIGATION ========== -->
-<!-- ✅ Supprimé "fixed top-0 left-0 right-0" → déjà géré par le CSS custom #navbar -->
+<!-- ========== NAVIGATION ========== -->
 <nav id="navbar" class="z-50 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 md:h-20">
+    <div class="flex items-center justify-between h-16 md:h-18">
 
       <!-- Logo -->
-      <a href="#hero" class="smooth-scroll flex flex-col leading-tight">
-        <span class="font-playfair text-gold text-xl md:text-2xl font-bold tracking-wider">VILIM Classic cars</span>
+      <a href="#hero" class="smooth-scroll flex flex-col leading-tight shrink-0">
+        <span class="font-playfair text-gold text-lg md:text-xl lg:text-2xl font-bold tracking-wider">VILIM Classic cars</span>
         <span class="text-xs text-gray-500 font-inter font-light tracking-widest uppercase">Žilina - Slovakia</span>
       </a>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center gap-6 lg:gap-8">
-        <a href="#vehicle"      class="nav-link smooth-scroll" data-i18n="nav.vehicle">Vozidlo</a>
-        <a href="#gallery"      class="nav-link smooth-scroll" data-i18n="nav.gallery">Galéria</a>
-        <a href="#events"       class="nav-link smooth-scroll" data-i18n="nav.events">Udalosti</a>
-        <a href="#how-it-works" class="nav-link smooth-scroll" data-i18n="nav.how">Ako to funguje</a>
-        <a href="#pricing"      class="nav-link smooth-scroll" data-i18n="nav.pricing">Cenník</a>
-        <a href="#contact"      class="nav-link smooth-scroll" data-i18n="nav.contact">Kontakt</a>
+      <div class="hidden md:flex items-center gap-3 lg:gap-8">
+        <a href="#vehicle"      class="nav-link smooth-scroll whitespace-nowrap" data-i18n="nav.vehicle">Vozidlo</a>
+        <a href="#gallery"      class="nav-link smooth-scroll whitespace-nowrap" data-i18n="nav.gallery">Galéria</a>
+        <a href="#events"       class="nav-link smooth-scroll whitespace-nowrap" data-i18n="nav.events">Udalosti</a>
+        <a href="#how-it-works" class="nav-link smooth-scroll whitespace-nowrap" data-i18n="nav.how">Ako to funguje</a>
+        <a href="#pricing"      class="nav-link smooth-scroll whitespace-nowrap" data-i18n="nav.pricing">Cenník</a>
+        <a href="#contact"      class="nav-link smooth-scroll whitespace-nowrap" data-i18n="nav.contact">Kontakt</a>
       </div>
 
       <!-- Lang + Hamburger -->
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 lg:gap-4 shrink-0">
         <!-- Lang switcher -->
         <div class="flex items-center gap-1">
           <button class="lang-btn active" data-lang="sk">SK</button>
@@ -65,7 +65,7 @@
     </div>
   </div>
 
-  <!-- Mobile Menu -->
+  <!-- Mobile Menu — inchangé -->
   <div id="mobile-menu" class="mobile-menu overflow-hidden md:hidden">
     <div class="px-4 py-2 border-t border-gray-800">
       <a href="#vehicle"      class="mobile-nav-link smooth-scroll" data-i18n="nav.vehicle">Vozidlo</a>
@@ -77,7 +77,6 @@
     </div>
   </div>
 </nav>
-
 
 <!-- ========== HERO ========== -->
 <section id="hero" class="hero-section relative min-h-screen flex items-center justify-center">
