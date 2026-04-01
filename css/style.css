@@ -176,7 +176,6 @@ footer {
 }
 
 /* ===== MOBILE MENU ===== */
-/* ===== MOBILE MENU ===== */
 .mobile-menu {
   max-height: 0;
   overflow: hidden;                /* ← déjà présent via Tailwind, mais on le force ici */
@@ -243,6 +242,16 @@ footer {
 }
 
 .hero-title { text-shadow: 0 2px 40px rgba(0,0,0,0.8); }
+
+/* ===== HERO LANDSCAPE FIX ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 100svh;            /* svh = small viewport height, plus fiable sur mobile */
+    align-items: flex-start;       /* contenu part du haut plutôt que centré */
+    padding-top: 80px;             /* espace sous la navbar */
+    padding-bottom: 40px;
+  }
+}
 
 /* ===== SCROLL INDICATOR ===== */
 .scroll-mouse {
