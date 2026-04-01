@@ -19,22 +19,35 @@ sk: {
   'hero.cta':       'Rezervovať termín',
   'hero.discover':  'Objaviť vozidlo',
 
-  // Vehicle
+  // vehicle — SK
   'vehicle.label':       'Naše vozidlo',
   'vehicle.title':       'Ikona nemeckej elegancie',
   'vehicle.description': 'Mercedes-Benz 230E z roku 1983 je oveľa viac než automobil — je to symbol nezničiteľnej kvality a nadčasovej elegancie, éry, v ktorej nemecké inžinierstvo definovalo pojem trvanlivosť. So svojím kultivovaným motorom so vstrekovaním paliva a ikonickou siluetou radu W123 predstavuje vrchol éry, kedy boli automobily stavané na celý život a luxus znamenal absolútnu spoľahlivosť.',
-  'vehicle.spec.model':      'Model',
-  'vehicle.spec.year':       'Rok výroby',
-  'vehicle.spec.engine':     'Motor',
-  'vehicle.spec.color':      'Farba',
-  'vehicle.spec.colorValue': 'Strieborná',
-  'vehicle.spec.seats':      'Sedadlá',
-  'vehicle.spec.class':      'Kategória',
-  'vehicle.spec.classValue': 'Historické',
-  'vehicle.feat1': '✦ Zachovalý a pôvodný interiér',
-  'vehicle.feat2': '✦ Bezchybný technický stav',
-  'vehicle.feat3': '✦ Ideálne na svadobné fotografie alebo iné udalosti či projekty',
-  'vehicle.feat4': '✦ Profesionálny šofér k dispozícii',
+
+  // Specs — labels
+  'vehicle.specs.model.label':        'Model',
+  'vehicle.specs.year.label':         'Rok výroby',
+  'vehicle.specs.engine.label':       'Motor',
+  'vehicle.specs.color.label':        'Farba',
+  'vehicle.specs.seats.label':        'Sedadlá',
+  'vehicle.specs.category.label':     'Kategória',
+  'vehicle.specs.manufacturer.label': 'Výrobca',
+  'vehicle.specs.location.label':     'Lokalita',
+
+  // Specs — values
+  'vehicle.specs.model.value':        '230E W123',
+  'vehicle.specs.year.value':         '1983',
+  'vehicle.specs.engine.value':       '2.3L · 136 hp',
+  'vehicle.specs.color.value':        'Strieborná',
+  'vehicle.specs.seats.value':        '5',
+  'vehicle.specs.category.value':     'Historické',
+  'vehicle.specs.manufacturer.value': 'Mercedes-Benz',
+  'vehicle.specs.location.value':     'Žilinsky kraj, Slovensko',
+
+  'vehicle.feat1': 'Zachovalý a pôvodný interiér',
+  'vehicle.feat2': 'Bezchybný technický stav',
+  'vehicle.feat3': 'Ideálne na svadobné fotografie alebo iné udalosti či projekty',
+  'vehicle.feat4': 'Profesionálny šofér k dispozícii',
 
   // Gallery
   'gallery.label': 'Galéria',
@@ -176,22 +189,35 @@ sk: {
     'hero.cta':       'Réserver une date',
     'hero.discover':  'Découvrir le véhicule',
 
-    // Vehicle
+    // vehicle — FR
     'vehicle.label':       'Notre véhicule',
     'vehicle.title':       'Icône de l\'élégance allemande',
-    'vehicle.description': 'La Mercedes-Benz 230E de 1983 est bien plus qu\'une automobile — c\'est le symbole d\'une qualité indestructible et d\'une élégance intemporelle, d\'une époque où l\'ingénierie allemande définissait le mot durabilité. Avec son moteur à injection raffiné et la silhouette iconique de la série W123, elle représente le sommet d\'une ère où les voitures étaient construites pour durer toute une vie et où le luxe rimait avec fiabilité absolue.',
-    'vehicle.spec.model':      'Modèle',
-    'vehicle.spec.year':       'Année de fabrication',
-    'vehicle.spec.engine':     'Moteur',
-    'vehicle.spec.color':      'Couleur',
-    'vehicle.spec.colorValue': 'Argent',
-    'vehicle.spec.seats':      'Sièges',
-    'vehicle.spec.class':      'Catégorie',
-    'vehicle.spec.classValue': 'Historique',
-    'vehicle.feat1': '✦ Intérieur préservé et d\'origine',
-    'vehicle.feat2': '✦ État technique irréprochable',
-    'vehicle.feat3': '✦ Idéal pour les photos de mariage ou autres événements et projets',
-    'vehicle.feat4': '✦ Chauffeur professionnel disponible',
+    'vehicle.description': 'La Mercedes-Benz 230E de 1983 est bien plus qu\'une automobile — c\'est le symbole d\'une qualité indestructible et d\'une élégance intemporelle, d\'une époque où l\'ingénierie allemande définissait la durabilité. Avec son moteur à injection raffiné et la silhouette iconique de la série W123, elle représente le sommet d\'une ère où les voitures étaient construites pour durer toute une vie.',
+
+    // Specs — labels
+    'vehicle.specs.model.label':        'Modèle',
+    'vehicle.specs.year.label':         'Année',
+    'vehicle.specs.engine.label':       'Moteur',
+    'vehicle.specs.color.label':        'Couleur',
+    'vehicle.specs.seats.label':        'Sièges',
+    'vehicle.specs.category.label':     'Catégorie',
+    'vehicle.specs.manufacturer.label': 'Fabricant',
+    'vehicle.specs.location.label':     'Localité',
+
+    // Specs — values
+    'vehicle.specs.model.value':        '230E W123',
+    'vehicle.specs.year.value':         '1983',
+    'vehicle.specs.engine.value':       '2.3L · 136 ch',
+    'vehicle.specs.color.value':        'Argentée',
+    'vehicle.specs.seats.value':        '5',
+    'vehicle.specs.category.value':     'Véhicule historique',
+    'vehicle.specs.manufacturer.value': 'Mercedes-Benz',
+    'vehicle.specs.location.value':     'Région de Žilina, Slovaquie',
+
+    'vehicle.feat1': 'Intérieur préservé et d\'origine',
+    'vehicle.feat2': 'État technique irréprochable',
+    'vehicle.feat3': 'Idéal pour les photos de mariage ou autres événements et projets',
+    'vehicle.feat4': 'Chauffeur professionnel disponible',
 
     // Gallery
     'gallery.label': 'Galerie',
@@ -331,22 +357,35 @@ sk: {
     'hero.cta':       'Book a date',
     'hero.discover':  'Discover the vehicle',
 
-    // Vehicle
+    // vehicle — EN
     'vehicle.label':       'Our vehicle',
     'vehicle.title':       'Icon of German elegance',
-    'vehicle.description': 'The 1983 Mercedes-Benz 230E is far more than a car — it is a symbol of indestructible quality and timeless elegance, of an era when German engineering defined the word durability. With its refined fuel-injected engine and the iconic silhouette of the W123 series, it represents the pinnacle of a time when cars were built to last a lifetime and luxury meant absolute reliability.',
-    'vehicle.spec.model':      'Model',
-    'vehicle.spec.year':       'Year',
-    'vehicle.spec.engine':     'Engine',
-    'vehicle.spec.color':      'Colour',
-    'vehicle.spec.colorValue': 'Silver',
-    'vehicle.spec.seats':      'Seats',
-    'vehicle.spec.class':      'Category',
-    'vehicle.spec.classValue': 'Historic',
-    'vehicle.feat1': '✦ Preserved and original interior',
-    'vehicle.feat2': '✦ Impeccable technical condition',
-    'vehicle.feat3': '✦ Ideal for wedding photos or other events and projects',
-    'vehicle.feat4': '✦ Professional chauffeur available',
+    'vehicle.description': 'The 1983 Mercedes-Benz 230E is far more than a car — it is a symbol of indestructible quality and timeless elegance, from an era when German engineering defined the very notion of durability. With its refined fuel-injected engine and the iconic W123 silhouette, it represents the pinnacle of a time when cars were built to last a lifetime.',
+
+    // Specs — labels
+    'vehicle.specs.model.label':        'Model',
+    'vehicle.specs.year.label':         'Year',
+    'vehicle.specs.engine.label':       'Engine',
+    'vehicle.specs.color.label':        'Color',
+    'vehicle.specs.seats.label':        'Seats',
+    'vehicle.specs.category.label':     'Category',
+    'vehicle.specs.manufacturer.label': 'Manufacturer',
+    'vehicle.specs.location.label':     'Location',
+
+    // Specs — values
+    'vehicle.specs.model.value':        '230E W123',
+    'vehicle.specs.year.value':         '1983',
+    'vehicle.specs.engine.value':       '2.3L · 136 hp',
+    'vehicle.specs.color.value':        'Silver',
+    'vehicle.specs.seats.value':        '5',
+    'vehicle.specs.category.value':     'Historic vehicle',
+    'vehicle.specs.manufacturer.value': 'Mercedes-Benz',
+    'vehicle.specs.location.value':     'Žilina Region, Slovakia',
+
+    'vehicle.feat1': 'Preserved and original interior',
+    'vehicle.feat2': 'Impeccable technical condition',
+    'vehicle.feat3': 'Ideal for wedding photos or other events and projects',
+    'vehicle.feat4': 'Professional chauffeur available',
 
     // Gallery
     'gallery.label': 'Gallery',
