@@ -6,7 +6,7 @@ const Parallax = (() => {
   // ── Configuration ──────────────────────────────────────────
   const CONFIG = {
     speed: 0.05,        // 0 = fixe, 1 = défile avec le contenu, 0.4 = lent
-    opacity: 0.75,     // Très discret — watermark élégant
+    opacity: 1,     // Très discret — watermark élégant
     mobileBreakpoint: 768, // Désactivé sous cette largeur (px)
   };
 
