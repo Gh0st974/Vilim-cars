@@ -37,14 +37,26 @@ sk: {
   'vehicle.feat4': '✦ Profesionálny šofér k dispozícii',
 
   // Gallery
-  'gallery.label': 'Fotografie',
-  'gallery.title': 'Galéria',
+  'gallery.label': 'Galéria',
+  'gallery.title': 'Fotografie',
   'gallery.alt1':  'Mercedes 230E - Pohľad spredu',
-  'gallery.alt2':  'Mercedes 230E - Pohľad zboku',
-  'gallery.alt3':  'Mercedes 230E - Interiér',
-  'gallery.alt4':  'Mercedes 230E - Detail motora',
-  'gallery.alt5':  'Mercedes 230E - Pohľad zozadu',
-  'gallery.alt6':  'Mercedes 230E - Svadba',
+  'gallery.alt2':  'Mercedes 230E - Pohľad z ľavej strany',
+  'gallery.alt3':  'Mercedes 230E - Pohľad zozadu',
+  'gallery.alt4':  'Mercedes 230E - Detail prednej časti',
+  'gallery.alt5':  'Mercedes 230E - Pohľad na prednú pneumatiku',
+  'gallery.alt6':  'Mercedes 230E - Detail hviezdy Mercedes',
+  'gallery.alt7':  'Mercedes 230E - Interiér na strane vodiča',
+  'gallery.alt8':  'Mercedes 230E - Palubná doska a volant',
+  'gallery.alt9':  'Mercedes 230E - Pohľad zozadu so znakom 230E',
+  'gallery.alt10': 'Mercedes 230E - Pohľad z predného rohu',
+  'gallery.alt11': 'Mercedes 230E - Pohľad zozadu ŠPZ',
+  'gallery.alt12': 'Mercedes 230E - Detail znaku 230E na kufri',
+  'gallery.alt13': 'Mercedes 230E - Pohľad spredu v noci so zapnutými svetlami',
+  'gallery.alt14': 'Mercedes 230E - Pohľad spredu pri západe slnka',
+  'gallery.alt15': 'Mercedes 230E - Detail hviezdy Mercedes',
+
+
+
 
   // Events
   'events.label':          'Udalosti',
@@ -182,14 +194,25 @@ sk: {
     'vehicle.feat4': '✦ Chauffeur professionnel disponible',
 
     // Gallery
-    'gallery.label': 'Photographies',
-    'gallery.title': 'Galerie',
+    'gallery.label': 'Galerie',
+    'gallery.title': 'Photographies',
     'gallery.alt1':  'Mercedes 230E - Vue de face',
-    'gallery.alt2':  'Mercedes 230E - Vue de côté',
-    'gallery.alt3':  'Mercedes 230E - Intérieur',
-    'gallery.alt4':  'Mercedes 230E - Détail du moteur',
-    'gallery.alt5':  'Mercedes 230E - Vue de derrière',
-    'gallery.alt6':  'Mercedes 230E - Mariage',
+    'gallery.alt2':  'Mercedes 230E - Vue de côté gauche',
+    'gallery.alt3':  'Mercedes 230E - Vue de derrière',
+    'gallery.alt4':  'Mercedes 230E - Détail de la face avant',
+    'gallery.alt5':  'Mercedes 230E - Vue roue avant',
+    'gallery.alt6':  'Mercedes 230E - Détail de l\'étoile Mercedes',
+    'gallery.alt7':  'Mercedes 230E - Intérieur côté conducteur',
+    'gallery.alt8':  'Mercedes 230E - Tableau de bord et volant',
+    'gallery.alt9':  'Mercedes 230E - Vue de derrière avec badge 230E',
+    'gallery.alt10': 'Mercedes 230E - Vue trois-quart avant',
+    'gallery.alt11': 'Mercedes 230E - Vue de derrière plaque',
+    'gallery.alt12': 'Mercedes 230E - Détail du badge 230E sur le coffre',
+    'gallery.alt13': 'Mercedes 230E - Vue de face de nuit phares allumés',
+    'gallery.alt14': 'Mercedes 230E - Vue de face au coucher du soleil',
+    'gallery.alt15': 'Mercedes 230E - Détail de l\'étoile Mercedes',
+
+
 
     // Events
     'events.label':          'Événements',
@@ -326,14 +349,24 @@ sk: {
     'vehicle.feat4': '✦ Professional chauffeur available',
 
     // Gallery
-    'gallery.label': 'Photography',
-    'gallery.title': 'Gallery',
+    'gallery.label': 'Gallery',
+    'gallery.title': 'Photography',
     'gallery.alt1':  'Mercedes 230E - Front view',
-    'gallery.alt2':  'Mercedes 230E - Side view',
-    'gallery.alt3':  'Mercedes 230E - Interior',
-    'gallery.alt4':  'Mercedes 230E - Engine detail',
-    'gallery.alt5':  'Mercedes 230E - Rear view',
-    'gallery.alt6':  'Mercedes 230E - Wedding',
+    'gallery.alt2':  'Mercedes 230E - Left side view',
+    'gallery.alt3':  'Mercedes 230E - Rear view',
+    'gallery.alt4':  'Mercedes 230E - Front detail',
+    'gallery.alt5':  'Mercedes 230E - Front wheel view',
+    'gallery.alt6':  'Mercedes 230E - Mercedes star detail',
+    'gallery.alt7':  'Mercedes 230E - Driver side interior',
+    'gallery.alt8':  'Mercedes 230E - Dashboard and steering wheel',
+    'gallery.alt9':  'Mercedes 230E - Rear view with 230E badge',
+    'gallery.alt10': 'Mercedes 230E - Three quarter front view',
+    'gallery.alt11': 'Mercedes 230E - Rear view license plate',
+    'gallery.alt12': 'Mercedes 230E - 230E badge detail on trunk',
+    'gallery.alt13': 'Mercedes 230E - Front view at night headlights on',
+    'gallery.alt14': 'Mercedes 230E - Front view at sunset',
+    'gallery.alt15': 'Mercedes 230E - Mercedes star detail',
+
 
     // Events
     'events.label':          'Events',
