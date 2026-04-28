@@ -597,99 +597,95 @@
 <section id="pricing" class="py-20 md:py-32 bg-section-alt">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+    <!-- Titre de section -->
     <div class="text-center mb-16" data-aos="fade-up">
       <p class="section-label" data-i18n="pricing.label">Cenník</p>
-      <h2 class="section-title font-playfair" data-i18n="pricing.title">Naše balíčky</h2>
+      <h2 class="section-title font-playfair" data-i18n="pricing.title">Naše ponuky</h2>
       <div class="gold-divider"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
-      <!-- Basic -->
+      <!-- ── CARTE 1 : OBRAD ── -->
       <div class="price-card" data-aos="fade-up" data-aos-delay="0">
         <div class="price-header">
-          <p class="price-tier" data-i18n="pricing.basic.tier">Základný</p>
-          <h3 class="price-name font-playfair" data-i18n="pricing.basic.name">Krátka jazda</h3>
+          <p class="price-tier" data-i18n="pricing.basic.tier">OBRAD</p>
+          <h3 class="price-name font-playfair" data-i18n="pricing.basic.name">Svadba</h3>
           <div class="price-amount">
             <span class="price-currency">€</span>
             <span class="price-value">150</span>
           </div>
-          <span class="price-period text-gray-500 text-sm" data-i18n="pricing.basic.period">/ do 2h</span>
+          <span class="text-gray-500 text-xs mt-1 block">+ Fuel 0,20 €/km</span>
         </div>
         <div class="price-divider"></div>
         <ul class="price-features mb-6">
-          <li class="price-feature" data-i18n="pricing.basic.f1">Zilinsky kraj</li>
-          <li class="price-feature" data-i18n="pricing.basic.f2">Fotenie pred svadbou</li>
-          <li class="price-feature" data-i18n="pricing.basic.f3">odvoz na obrad a z obradu</li>
-          <li class="price-feature" data-i18n="pricing.basic.f4">Profesionálny vodič k dispozicii az po slavnostny obed</li>
-            <!-- Extra -->
-           <li class="price-feature-extras-divider">
-            <span data-i18n="pricing.extras.label">za priplatok</span>
-          </li>
-          <li class="price-feature price-feature--extra" data-i18n="pricing.extras.decoration">Vyzdoba vozidla — 50 €</li>
-          <li class="price-feature price-feature--extra" data-i18n="pricing.extras.champagne">Chladené šampanské — 20 €</li>
+          <li class="price-feature" data-i18n="pricing.basic.f1">Fotenie pred svadbou</li>
+          <li class="price-feature" data-i18n="pricing.basic.f2">Odvoz na obrad a späť</li>
+          <li class="price-feature" data-i18n="pricing.basic.f3">Profesionálny vodič k dispozícii až po svadobný obed</li>
+          <li class="price-feature price-feature--extra" data-i18n="pricing.basic.f4">Príplatok: výzdoba vozidla — 50 €, Chladené šampanské — 20 €</li>
         </ul>
-        <a href="#contact" class="btn-secondary smooth-scroll w-full text-center block" data-i18n="pricing.basic.cta">Rezervovať</a>
+        <a href="#contact" class="btn-secondary smooth-scroll w-full text-center block" data-i18n="pricing.basic.cta">Rezervovať termín</a>
       </div>
 
-      <!-- Premium (featured) -->
+      <!-- ── CARTE 2 : EXPOZÍCIA (Corrigée) ── -->
       <div class="price-card price-card-featured" data-aos="fade-up" data-aos-delay="100">
         <div class="price-header">
-          <p class="price-tier" data-i18n="pricing.premium.tier">Najpopulárnejší</p>
-          <h3 class="price-name font-playfair" data-i18n="pricing.premium.name">Svadobný deň</h3>
-          <div class="price-amount">
-            <span class="price-currency">€</span>
-            <span class="price-value">350</span>
+          <p class="price-tier" data-i18n="pricing.premium.tier">EXPOZÍCIA</p>
+          <h3 class="price-name font-playfair" data-i18n="pricing.premium.name">Exhibition</h3>
+          
+          <!-- Ligne Prix + Heure alignés -->
+          <div class="flex items-baseline justify-center gap-1">
+            <div class="price-amount">
+              <span class="price-currency">€</span>
+              <span class="price-value">30</span>
+            </div>
+            <span class="price-period text-gray-500 text-sm" data-i18n="pricing.premium.period">/ h</span>
           </div>
-          <span class="price-period text-gray-500 text-sm" data-i18n="pricing.premium.period">/ pol dňa</span>
-        </div>
+          
+          <span class="text-gray-500 text-xs mt-1 block">+ Fuel 0,20 €/km</span>
+        </div> <!-- Fermeture de price-header qui manquait -->
+
         <div class="price-divider"></div>
         <ul class="price-features mb-6">
-          <li class="price-feature" data-i18n="pricing.premium.f1">Celé Slovensko</li>
-          <li class="price-feature" data-i18n="pricing.premium.f2">Fotenie pred svadbou</li>
-          <li class="price-feature" data-i18n="pricing.premium.f3">odvoz na obrad a z obradu</li>
-          <li class="price-feature" data-i18n="pricing.premium.f4">Profesionálny vodič k dispozicii az po slavnostny obed</li>
-            <!-- Extra -->
-           <li class="price-feature-extras-divider">
-            <span data-i18n="pricing.extras.label">za priplatok</span>
-          </li>
-          <li class="price-feature price-feature--extra" data-i18n="pricing.extras.decoration">Vyzdoba vozidla — 50 €</li>
-          <li class="price-feature price-feature--extra" data-i18n="pricing.extras.champagne">Chladené šampanské — 20 €</li>
+          <li class="price-feature" data-i18n="pricing.premium.f1">Fotenie, expozície</li>
+          <li class="price-feature" data-i18n="pricing.premium.f2">Nakrúcanie filmov, komparz</li>
+          <li class="price-feature" data-i18n="pricing.premium.f3">Hudobné videoklipy</li>
+          <li class="price-feature" data-i18n="pricing.premium.f4">Reklamné spoty</li>
         </ul>
-        <a href="#contact" class="btn-primary smooth-scroll w-full text-center block relative z-10" data-i18n="pricing.premium.cta">Rezervovať</a>
+        <a href="#contact" class="btn-primary smooth-scroll w-full text-center block relative z-10" data-i18n="pricing.premium.cta">Rezervovať termín</a>
       </div>
 
-      <!-- VIP -->
+      <!-- ── CARTE 3 : NA MIERU ── -->
       <div class="price-card" data-aos="fade-up" data-aos-delay="200">
         <div class="price-header">
-          <p class="price-tier" data-i18n="pricing.vip.tier">VIP</p>
-          <h3 class="price-name font-playfair" data-i18n="pricing.vip.name">Celý deň</h3>
+          <p class="price-tier" data-i18n="pricing.vip.tier">NA MIERU</p>
+          <h3 class="price-name font-playfair" data-i18n="pricing.vip.name">Váš projekt</h3>
           <div class="price-amount">
-            <span class="price-currency">€</span>
-            <span class="price-value">XXX</span>
+            <span class="price-value text-2xl" data-i18n="pricing.vip.price">Na dopyt</span>
           </div>
-          <span class="price-period text-gray-500 text-sm" data-i18n="pricing.vip.period">/ celý deň</span>
         </div>
         <div class="price-divider"></div>
         <ul class="price-features mb-6">
-          <li class="price-feature" data-i18n="pricing.vip.f1">fotenie, expozicia</li>
-          <li class="price-feature" data-i18n="pricing.vip.f2">nakrucanie filmov, komparz</li>
-          <li class="price-feature" data-i18n="pricing.vip.f3">hudobne vidoeklipy</li>
-          <li class="price-feature" data-i18n="pricing.vip.f4">reklamné spoty</li>
-          <li class="price-feature" data-i18n="pricing.vip.f5">nevahajte nas kontaktovat z akymkolvek vasim napadom, ochotne s vami preberieme moznosti a realizaciu</li>
-          <li class="price-feature" data-i18n="pricing.vip.f6">cena bude kompletne personalizovana podla vaseho projektu</li>
+          <li class="price-feature" data-i18n="pricing.vip.f1">Neváhajte nás kontaktovať s akýmkoľvek nápadom — radi s vami preberieme možnosti a realizáciu</li>
+          <li class="price-feature" data-i18n="pricing.vip.f2">Cena bude úplne personalizovaná podľa vášho projektu</li>
         </ul>
-        <a href="#contact" class="btn-secondary smooth-scroll w-full text-center block" data-i18n="pricing.vip.cta">Kontaktovať nás</a>
+        <a href="#contact" class="btn-secondary smooth-scroll w-full text-center block" data-i18n="pricing.vip.cta">Kontaktujte nás</a>
       </div>
 
     </div>
 
-    <p class="text-center text-gray-500 text-sm mt-10 max-w-2xl mx-auto font-inter" data-i18n="pricing.note" data-aos="fade-up">
-      * Ceny sú orientačné. Konečná cena závisí od vzdialenosti a požiadaviek. Kontaktujte nás pre individuálnu cenovú ponuku.
+    <!-- Note de bas de section -->
+    <p class="text-center text-gray-500 text-sm mt-10 max-w-2xl mx-auto font-inter"
+       data-i18n="pricing.note"
+       data-aos="fade-up">
+      * Každá ponuka bude individuálne prediskutovaná a prispôsobená vašim špecifickým potrebám
     </p>
 
   </div>
 </section>
+
+
+
 
 <!-- ========== CONTACT ========== -->
 <section id="contact" class="py-20 md:py-32 bg-black">
@@ -722,20 +718,6 @@
         </div>
       </div>
 
-      <div class="contact-info-item">
-        <span class="contact-icon">
-          <img src="assets/icons/icon-phone.svg" 
-              alt="Telefón" 
-              class="contact-icon-img">
-        </span>
-        <div>
-          <p class="contact-info-label" data-i18n="contact.phone">Telefón</p>
-          <a href="tel:+421911700778" 
-            class="contact-info-value hover:text-gold transition-colors">
-            +421 911 700 778
-          </a>
-        </div>
-      </div>
 
       <div class="contact-info-item">
         <span class="contact-icon">
@@ -760,7 +742,6 @@
         </div>
       </div>
 
-      <!-- Formulaire -->
       <!-- Formulaire -->
         <div data-aos="fade-left">
           <form 
@@ -828,6 +809,19 @@
               <span class="form-error" id="fieldMessageError"></span>
             </div>
 
+            <div class="form-group">
+              <label class="form-label" for="fieldAddress" data-i18n="form.address">Adresa udalosti</label>
+              <input 
+                id="fieldAddress" 
+                name="address" 
+                type="text" 
+                class="form-input" 
+                data-i18n-placeholder="form.addressPh" 
+                placeholder="Ulica, mesto, PSČ" 
+              />
+              <span class="form-error" id="fieldAddressError"></span>
+            </div>
+
             <div id="formSuccess" class="form-success hidden"></div>
             <div id="formError"   class="form-error-global hidden"></div>
 
@@ -876,20 +870,32 @@
             Žilina - Slovakia
           </li>
           <li class="flex items-center gap-2">
-            <img src="assets/icons/icon-phone.svg" alt="Telefón" class="contact-icon-img">
-            <a href="tel:+421911700778" class="footer-link">+421 911 700 778</a>
-          </li>
-          <li class="flex items-center gap-2">
             <img src="assets/icons/icon-email.svg" alt="Email" class="contact-icon-img">
             <a href="mailto:vilim.classic.cars@gmail.com" class="footer-link">vilim.classic.cars@gmail.com</a>
           </li>
+
+          <!-- ✅ NOUVEAU : Réseaux sociaux -->
+          <li class="flex items-center gap-4 pt-2">
+            
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/VOTRE_PAGE" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">
+              <img src="assets/icons/icon-facebook.png" alt="Facebook" class="contact-icon-img hover:opacity-80 transition-opacity duration-300">
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/VOTRE_PAGE" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
+              <img src="assets/icons/icon-instagram.png" alt="Instagram" class="contact-icon-img hover:opacity-80 transition-opacity duration-300">
+            </a>
+
+          </li>
+
         </ul>
       </div>
 
-
     </div>
 
-    <div class="border-t border-gray-800
     <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="text-gray-600 text-xs font-inter" data-i18n="footer.rights">
         © 2026 VILIM Classic cars.
@@ -902,6 +908,7 @@
 
   </div>
 </footer>
+
 
 <!-- ========== LIGHTBOX ========== -->
 <div id="lightbox" class="hidden fixed inset-0 z-[100] flex items-center justify-center">

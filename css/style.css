@@ -637,21 +637,27 @@ footer {
   padding: 32px;
   position: relative;
   transition: all 0.3s ease;
+  
+  /* AJOUTS POUR LA TAILLE ÉGALE */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .price-card:hover {
   border-color: var(--gold-dark);
-  transform: translateY(-4px);
+  transform: translateY(-8px);
 }
 
 .price-card-featured {
   border-color: var(--gold);
   background: linear-gradient(135deg, var(--dark-alt), rgba(201,168,76,0.05));
   transform: scale(1.02);
+  z-index: 10;
 }
 
 .price-card-featured:hover {
-  transform: scale(1.02) translateY(-4px);
+  transform: scale(1.02) translateY(-8px);
 }
 
 .price-badge {
@@ -669,7 +675,10 @@ footer {
   white-space: nowrap;
 }
 
-.price-header { text-align: center; margin-bottom: 24px; }
+.price-header { 
+  text-align: center; 
+  margin-bottom: 24px; 
+}
 
 .price-tier {
   font-size: 0.75rem;
@@ -726,7 +735,11 @@ footer {
 .price-features {
   list-style: none;
   padding: 0;
-  margin-bottom: 24px;
+  margin-bottom: 32px; /* Espace avant le bouton */
+  
+  /* AJOUT CRITIQUE : 
+     Pousse tout ce qui est en dessous (le bouton) vers le bas */
+  flex-grow: 1; 
 }
 
 .price-feature {
@@ -785,6 +798,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
 
 /* ===== CONTACT ===== */
 .contact-info-box {

@@ -20,8 +20,9 @@ const Form = (() => {
   }
 
   function bindRealTimeValidation() {
+    // AJOUT : 'fieldAddress' ajouté à la liste
     const fields = ['fieldFirstName', 'fieldLastName', 'fieldEmail',
-                    'fieldEventType', 'fieldDate'];
+                    'fieldEventType', 'fieldDate', 'fieldAddress'];
     fields.forEach(id => {
       const el = document.getElementById(id);
       if (!el) return;
@@ -61,6 +62,7 @@ const Form = (() => {
       document.getElementById('fieldEmail'),
       document.getElementById('fieldEventType'),
       document.getElementById('fieldDate'),
+      document.getElementById('fieldAddress'), // AJOUT : validation du champ adresse
     ];
     let valid = true;
     fields.forEach(f => {
@@ -124,6 +126,7 @@ const Form = (() => {
       'phone':      document.getElementById('fieldPhone').value.trim(),
       'eventType':  document.getElementById('fieldEventType').value,
       'date':       document.getElementById('fieldDate').value,
+      'address':    document.getElementById('fieldAddress').value.trim(), // AJOUT : Envoi de l'adresse
       'message':    document.getElementById('fieldMessage').value.trim(),
     });
 
