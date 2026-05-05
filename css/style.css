@@ -637,7 +637,7 @@ footer {
   padding: 32px;
   position: relative;
   transition: all 0.3s ease;
-  
+
   /* AJOUTS POUR LA TAILLE ÉGALE */
   display: flex;
   flex-direction: column;
@@ -659,6 +659,17 @@ footer {
   transform: scale(1.02) translateY(-8px);
 }
 
+.price-card-featured .btn-primary {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold-dark);
+}
+
+.price-card-featured .btn-primary:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
 .price-badge {
   position: absolute;
   top: -12px;
@@ -678,7 +689,6 @@ footer {
   text-align: center; 
   margin-bottom: 24px; 
 }
-
 
 .price-name {
   font-family: 'Playfair Display', serif;
@@ -726,8 +736,8 @@ footer {
 .price-features {
   list-style: none;
   padding: 0;
-  margin-bottom: 32px; /* Espace avant le bouton */
-  
+  margin-bottom: 32px;
+
   /* AJOUT CRITIQUE : 
      Pousse tout ce qui est en dessous (le bouton) vers le bas */
   flex-grow: 1; 
@@ -789,6 +799,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
 
 
 /* ===== CONTACT ===== */
