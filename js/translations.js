@@ -98,7 +98,7 @@ sk: {
     // Pricing
     'pricing.label':           'Cenník',
     'pricing.title':           'Naše ponuky',
-
+    'pricing.fuel': '+ Palivo 0,20 €/km',
     'pricing.basic.tier':      'OBRAD',
     'pricing.basic.name':      'Svadba',
     'pricing.basic.f1':        'Fotenie pred svadbou',
@@ -265,7 +265,7 @@ sk: {
     // Pricing
     'pricing.label':           'Tarifs',
     'pricing.title':           'Nos formules',
-
+    'pricing.fuel': '+ Carburant 0,20 €/km',
     'pricing.basic.tier':      'CÉRÉMONIE',
     'pricing.basic.name':      'Mariage',
     'pricing.basic.f1':        'Séance photo avant le mariage',
@@ -428,7 +428,7 @@ sk: {
     // Pricing
     'pricing.label':           'Pricing',
     'pricing.title':           'Our packages',
-
+    'pricing.fuel': '+ Fuel 0,20 €/km',
     'pricing.basic.tier':      'CEREMONY',
     'pricing.basic.name':      'Wedding',
     'pricing.basic.f1':        'Pre-wedding photo session',

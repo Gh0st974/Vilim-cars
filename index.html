@@ -609,13 +609,12 @@
       <!-- ── CARTE 1 : OBRAD ── -->
       <div class="price-card" data-aos="fade-up" data-aos-delay="0">
         <div class="price-header">
-          <p class="price-tier" data-i18n="pricing.basic.tier">OBRAD</p>
           <h3 class="price-name font-playfair" data-i18n="pricing.basic.name">Svadba</h3>
           <div class="price-amount">
             <span class="price-currency">€</span>
             <span class="price-value">150</span>
           </div>
-          <span class="text-gray-500 text-xs mt-1 block">+ Fuel 0,20 €/km</span>
+          <span class="text-gray-500 text-xs mt-1 block" data-i18n="pricing.fuel">+ Palivo 0,20 €/km</span>
         </div>
         <div class="price-divider"></div>
         <ul class="price-features mb-6">
@@ -630,7 +629,6 @@
       <!-- ── CARTE 2 : EXPOZÍCIA (Corrigée) ── -->
       <div class="price-card price-card-featured" data-aos="fade-up" data-aos-delay="100">
         <div class="price-header">
-          <p class="price-tier" data-i18n="pricing.premium.tier">EXPOZÍCIA</p>
           <h3 class="price-name font-playfair" data-i18n="pricing.premium.name">Exhibition</h3>
           
           <!-- Ligne Prix + Heure alignés -->
@@ -642,7 +640,7 @@
             <span class="price-period text-gray-500 text-sm" data-i18n="pricing.premium.period">/ h</span>
           </div>
           
-          <span class="text-gray-500 text-xs mt-1 block">+ Fuel 0,20 €/km</span>
+          <span class="text-gray-500 text-xs mt-1 block" data-i18n="pricing.fuel">+ Palivo 0,20 €/km</span>
         </div> <!-- Fermeture de price-header qui manquait -->
 
         <div class="price-divider"></div>
@@ -658,7 +656,6 @@
       <!-- ── CARTE 3 : NA MIERU ── -->
       <div class="price-card" data-aos="fade-up" data-aos-delay="200">
         <div class="price-header">
-          <p class="price-tier" data-i18n="pricing.vip.tier">NA MIERU</p>
           <h3 class="price-name font-playfair" data-i18n="pricing.vip.name">Váš projekt</h3>
           <div class="price-amount">
             <span class="price-value text-2xl" data-i18n="pricing.vip.price">Na dopyt</span>
@@ -874,22 +871,28 @@
             <a href="mailto:vilim.classic.cars@gmail.com" class="footer-link">vilim.classic.cars@gmail.com</a>
           </li>
 
-          <!-- ✅ NOUVEAU : Réseaux sociaux -->
-          <li class="flex items-center gap-4 pt-2">
-            
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/people/Vilim-Classic-Cars/pfbid02mFkwDTZbq4XpJj6haLkB4K1GhAcB5UDxPe7ijgZBncKPLee7woufTCUjVmP9bTaQl/" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook">
-              <img src="assets/icons/icon-facebook.png" alt="Facebook" class="contact-icon-img hover:opacity-80 transition-opacity duration-300">
-            </a>
+          <!-- ✅ Réseaux sociaux -->
+            <li class="flex flex-col gap-3 pt-2">
 
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/vilim.classic.cars/" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram">
-              <img src="assets/icons/icon-instagram.png" alt="Instagram" class="contact-icon-img hover:opacity-80 transition-opacity duration-300">
-            </a>
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/people/Vilim-Classic-Cars/pfbid02mFkwDTZbq4XpJj6haLkB4K1GhAcB5UDxPe7ijgZBncKPLee7woufTCUjVmP9bTaQl/" 
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook"
+                class="flex items-center gap-2 footer-link hover:opacity-80 transition-opacity duration-300">
+                <img src="assets/icons/icon-facebook.png" alt="Facebook" class="contact-icon-img">
+                Facebook - Vilim Classic Cars
+              </a>
 
-          </li>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/vilim.classic.cars/" 
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="flex items-center gap-2 footer-link hover:opacity-80 transition-opacity duration-300">
+                <img src="assets/icons/icon-instagram.png" alt="Instagram" class="contact-icon-img">
+                Instagram - Vilim Classic Cars
+              </a>
+
+            </li>
 
         </ul>
       </div>
